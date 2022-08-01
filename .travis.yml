@@ -1,22 +1,22 @@
 language: node_js
 node_js:
-  - 16
+- 16
 addons:
   apt:
     sources:
-      - travis-ci/sqlite3
+    - travis-ci/sqlite3
     packages:
-      - sqlite3
+    - sqlite3
 sudo: false
 before_script:
-  - npm install -g mocha
+- npm install -g mocha
 script:
-  - npm test
+- npm test
 deploy:
   provider: heroku
   skip_cleanup: true
   api_key:
-    secure: $HEROKU_API_KEY
+    secure: fwvY5jIW5JsPPGV6Ep6Ld67ztOIV5vLYJEwKQ28tc9zmApxsofXwRGyDCvoX+Yp1lvTmhBqtmTN7KIS4q4cfFezeFY+wmooOxjOiQObsc2xPwbVYDPvEz4piXW45vrAQSFKh8J3eecUVUS7sLOeGgYHAOYGFS7QOuwpiUfZMQjLJE/8tu+1kHxW65+k79bgkTyptsJiWNabEY07ImbHulvIEQWGj63Ia8e2OUF/Spd2hHFDoBdf3umDbbd40w/WJhLWPo+jSAQiYsUkk8NDMsFezQoLgeBco5GQ7nX8/pKW/TbPK/KKs9XLxCB7tTJIRD4Q6SO9JSAnf1liylYjfF/IndevIUZoi/gHzQFACzdDyEgsGMk2ahJ1/hQBsHQ0RReQOpSCbED9Yvmm/C72l2dnyaCQ1eB4YT+ZI8dALlsnWjafPtukA0APNppKefTpKx6/ZvO0wq+1f77bSZ948H2gObnseWSzqmwJrOHCZlvsj/pL7qn9oWv8r4vYJx/mrh/SlC7Aqk7GBxpnI9DSbnsLAaTabAkAFHssnU8GtIux2/hh22gcVBhZO9JXv5wCWPOKKBrLDHxxW51lKbIc1qMfNWoN3RzPjipIT6jcbFl0jJLNtejW5veVpKo7oSgdqC+eSaRsa05vzdjX86SfNFCOofWGIzdzEap66jWIRyZc=
   app: ford-api-marcoscaique
   edge: true
   on:

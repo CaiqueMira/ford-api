@@ -19,3 +19,5 @@ deploy:
     secure: $HEROKU_API_KEY
   app: ford-api-marcoscaique
   edge: true
+  on:
+    branch: main
